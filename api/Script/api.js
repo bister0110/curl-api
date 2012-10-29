@@ -1,4 +1,4 @@
-define(['jquery', 'js!http://htmlpreview.github.com/?https://github.com/bister0110/curl-api/blob/master/api/Script/bootstrap.js', 'css!http://htmlpreview.github.com/?https://github.com/bister0110/curl-api/blob/master/api/Style/bootstrap.css'], function ($) {
+define(['jquery', 'js!/Script/bootstrap.js', 'css!/Style/bootstrap.css'], function ($) {
     var exports = {};
     
     exports.getModal = function (Header, Body, Footer) {
