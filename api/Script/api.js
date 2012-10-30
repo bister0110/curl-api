@@ -1,6 +1,6 @@
-define(['jquery', 'js!Script/bootstrap.js', 'css!Style/bootstrap.css'], function ($) {
+define(['jquery', 'js!Script/bootstrap.js', 'js!Script/bootstrap-datepicker.js', 'css!Style/bootstrap.css','css!Style/datepicker.css'], function ($) {
     var exports = {};
-    
+    //,'js!Script/bootstrap-datepicker.js','css!Style/datepicker.css'
 	//Used to create a moda box
     exports.getModal = function (type, header, body, footer) {
 		//If parameter type is different from hide
@@ -45,9 +45,12 @@ define(['jquery', 'js!Script/bootstrap.js', 'css!Style/bootstrap.css'], function
 				}
 			}
 		})
-		return null;
+		//return null;
 	}
 	
-	
+	exports.datePicker = function () {
+		$('#dp1').datepicker({format: 'mm-dd-yyyy'});
+		return null;
+	}
     return exports;
 });
