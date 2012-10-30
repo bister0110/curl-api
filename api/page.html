@@ -2,16 +2,34 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<script src="http://htmlpreview.github.com/?https://github.com/bister0110/curl-api/blob/master/api/Script/curl.js" type="text/javascript"></script>
+		<script src="Script/curl.js" type="text/javascript"></script>
     </head>
     <body>
 
-		<a href="#myModal" class="btn" data-toggle="modal">Launch demo modal</a>
+		<!--used as target for modal box-->
 		<div id="myDiv"></div>
+		
+		<!--Different types of validation fields-->
+		<input class="validation" id="cemail" placeholder="eksempel@email.dk" data-lable="valid" data-validation="/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,6})$/"/>
+		<lable id="valid"></lable>
+		</br>
+		<input class="validation" id="clength" data-lable="valid1" data-validation="/^{11,30}$/"/>
+		<lable id="valid1"></lable>
+		</br>
+		<input class="validation" id="cfilled" data-lable="valid3" data-validation="/^[A-Za-z0-9_\-\.]{1}$/"/>
+		<lable id="valid3"></lable>
+		</br>
+		<input class="validation" id="password" data-compare="cpassword" data-lable="valid4"  data-validation="compare"/>
+		</br>
+		<input class="validation" id="cpassword" data-compare="password" data-lable="valid4" data-validation="compare"/>
+		<lable id="valid4"></lable>
+		
+		
 		<script>
-
-			curl(['http://htmlpreview.github.com/?https://github.com/bister0110/curl-api/blob/master/api/Script/api'], function (m) {
-				m.getModal('Bla', '<input/>', 'Footer');
+			//This is the curl calls
+			curl(['Script/api'], function (m) {
+				m.getModal('hide','Bla', '<input/>', 'Footer');
+				m.getValidation();
 			});
 
 		</script>
